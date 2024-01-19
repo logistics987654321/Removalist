@@ -50,7 +50,7 @@ const Landing = () => {
     try {
       const response =
         // await fetch("http://localhost:4000/",
-        await fetch("http://localhost:4000/", {
+        await fetch("https://removalist.onrender.com/", {
           method: "post",
           body: JSON.stringify({
             name,
