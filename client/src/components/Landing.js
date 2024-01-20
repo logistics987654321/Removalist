@@ -379,7 +379,7 @@ const Landing = () => {
                           onSubmit={collectData}
                         >
                           <h3 className="h4 text-black mb-4">
-                            <b>Book Your Truck</b>
+                            <b>Fill Out Our Form For Your Package</b>
                           </h3>
                           <div className="form-group row">
                             <div class="col-md-4 mb-3 mb-lg-0">

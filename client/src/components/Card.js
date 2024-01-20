@@ -3,10 +3,10 @@ const Card = () => {
  
 
   return (
-    <div>
+    <div style={{background:"black",paddingTop:"20px",paddingBottom:"20px"}}>
       <h2
         className="section-title"
-        style={{ color: "black", textAlign: "center" }}
+        style={{ color: "white", textAlign: "center" }}
       >
         Our Fleet of Moving Trucks For Local And Interstate Moves
       </h2>
