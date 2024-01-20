@@ -999,7 +999,7 @@ h5,
   border-radius: 30px;
   font-size: 0.7rem;
   font-weight: 900;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;

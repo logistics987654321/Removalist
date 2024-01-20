@@ -143,11 +143,9 @@ const Landing = () => {
                         "
                     >
                       <li class="cta">
-                        <a
-                          class="nav-link"
-                        >
+                        <a class="nav-link">
                           <span>
-                          Areas we service
+                            Areas we service
                             <BsChevronDown style={{ fontSize: "20px" }} />
                           </span>
                           <div className="dropdown-content">
@@ -159,9 +157,12 @@ const Landing = () => {
                         </a>
                       </li>
                       <li class="cta">
-                        <a  class="nav-link">
-                          <span>Interstate Moves     <BsChevronDown style={{ fontSize: "20px" }} /></span>
-                     
+                        <a class="nav-link">
+                          <span>
+                            Interstate Moves{" "}
+                            <BsChevronDown style={{ fontSize: "20px" }} />
+                          </span>
+
                           <div className="dropdown-content">
                             <a href="#home">Link1</a>
                             <a href="#home">Link2</a>
@@ -171,12 +172,12 @@ const Landing = () => {
                         </a>
                       </li>
                       <li class="cta">
-                        <a
-                
-                          class="nav-link"
-                        >
-                          <span>Country Moves <BsChevronDown style={{ fontSize: "20px" }} /></span>
-                       
+                        <a class="nav-link">
+                          <span>
+                            Country Moves{" "}
+                            <BsChevronDown style={{ fontSize: "20px" }} />
+                          </span>
+
                           <div className="dropdown-content">
                             <a href="#home">Link1</a>
                             <a href="#home">Link2</a>
@@ -187,7 +188,10 @@ const Landing = () => {
                       </li>
                       <li class="cta">
                         <a href="tel:0413358050" class="nav-link">
-                          <span><FaMobileAlt style={{fontSize:"20px"}}/>+610413358050</span>
+                          <span>
+                            <FaMobileAlt style={{ fontSize: "20px" }} />
+                            +610413358050
+                          </span>
                         </a>
                       </li>
                       <li class="cta">
@@ -228,123 +232,132 @@ const Landing = () => {
                     <div className="row align-items-center" my-5>
                       <div
                         id="demoform"
-                        className="col-lg-5 ml-auto"
+                        className="col-lg-7 ml-auto"
                         data-aos="fade-up"
                         data-aos-delay="200"
-                       >
-                       <form
+                      >
+                        <form
                           action="submit"
                           method="post"
                           className="form-box"
                           onSubmit={collectData}
-                         >
+                        >
                           <h3 className="h4 text-black mb-4">
                             <b>Book Your Truck</b>
                           </h3>
-                              <div className="form-group">
-                                  <input
-                                    id="name"
-                                    type="text"
-                                    className="form-control"
-                                    placeholder="Full Name*"
-                                    required="true"
-                                    value={name}
-                                    onChange={(e) => setName(e.target.value)}
-                                  />
-                                </div>
-                                  <div className="form-group">
-                                    <input
-                                      name="email"
-                                      id="email"
-                                      type="text"
-                                      class="form-control"
-                                      placeholder="Email"
-                                      required
-                                      value={email}
-                                      onChange={(e) => setEmail(e.target.value)}
-                                    />
-                                  </div>
-                                  <div className="form-group">
-                                    <input
-                                      name="mobileNumber"
-                                      id="mobileNumber"
-                                      type="number"
-                                      className="form-control"
-                                      placeholder="Phone Number*"
-                                      required
-                                      maxlength="10"
-                                      value={mobile}
-                                      onChange={(e) => setMobile(e.target.value)}
-                                    />
-                                  </div>
-                 
-
-                          <div className="form-group">
-                            <select
-                              className="form-control"
-                              required
-                              id="state"
-                              value={moveType}
-                              onChange={(e) => setMoveType(e.target.value)}
-                            >
-                              <option>Move Type*</option>
-                              <option value="Local Move">Local Move</option>
-                              <option value="Country Move">Country Move</option>
-                              <option value="Interstate Move">
-                                Interstate Move
-                              </option>
-                              <option value="Business Move">
-                                Business Move
-                              </option>
-                              <option value="Storage">Storage</option>
-                            </select>
-                          </div>
-
-                          <div className="form-group mb-4">
-                            <select
-                              className="form-control"
-                              required
-                              id="demoClass"
-                              value={moveSize}
-                              onChange={(e) => setMoveSize(e.target.value)}
-                            >
-                              <option>Move Size*</option>
-                              <option value="Studio">Studio</option>
-                              <option value="1 Bedroom">1 Bedroom</option>
-                              <option value="2 Bedroom">2 Bedroom</option>
-                              <option value="3 Bedroom">3 Bedroom</option>
-                              <option value="4 Bedroom">4 Bedroom</option>
-                              <option value="5 Bedroom">5 Bedroom</option>
-                              <option value="6 Bedroom">6 Bedroom</option>
-                              <option value="7+ Bedroom">7+ Bedroom</option>
-                            </select>
-                          </div>
-                          <div className="form-group">
+                          <div className="form-group row">
+                            <div class="col-md-4 mb-3 mb-lg-0">
+                              <input
+                                id="name"
+                                type="text"
+                                className="form-control"
+                                placeholder="Full Name*"
+                                required="true"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                              />
+                            </div>
+                            <div class="col-md-4">
+                              <input
+                                name="email"
+                                id="email"
+                                type="text"
+                                class="form-control"
+                                placeholder="Email"
+                                required
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                              />
+                            </div>
+                            <div class="col-md-4">
                             <input
                               name="mobileNumber"
                               id="mobileNumber"
-                              type="text"
+                              type="number"
                               className="form-control"
-                              placeholder="From Suburb"
+                              placeholder="Phone Number*"
                               required
-                              maxlength="20"
-                              value={fromSub}
-                              onChange={(e) => setFromSub(e.target.value)}
+                              maxlength="10"
+                              value={mobile}
+                              onChange={(e) => setMobile(e.target.value)}
                             />
+                            </div>
                           </div>
-                          <div className="form-group">
-                            <input
-                              name="mobileNumber"
-                              id="mobileNumber"
-                              type="text"
-                              className="form-control"
-                              placeholder="To Suburb"
-                              required
-                              maxlength="20"
-                              value={toSub}
-                              onChange={(e) => setToSub(e.target.value)}
-                            />
+ 
+
+                          <div className="form-group row">
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                              <select
+                                className="form-control"
+                                required
+                                id="state"
+                                value={moveType}
+                                onChange={(e) => setMoveType(e.target.value)}
+                              >
+                                <option>Move Type*</option>
+                                <option value="Local Move">Local Move</option>
+                                <option value="Country Move">
+                                  Country Move
+                                </option>
+                                <option value="Interstate Move">
+                                  Interstate Move
+                                </option>
+                                <option value="Business Move">
+                                  Business Move
+                                </option>
+                                <option value="Storage">Storage</option>
+                              </select>
+                            </div>
+                            <div class="col-md-6">
+                              <select
+                                className="form-control"
+                                required
+                                id="demoClass"
+                                value={moveSize}
+                                onChange={(e) => setMoveSize(e.target.value)}
+                              >
+                                <option>Move Size*</option>
+                                <option value="Studio">Studio</option>
+                                <option value="1 Bedroom">1 Bedroom</option>
+                                <option value="2 Bedroom">2 Bedroom</option>
+                                <option value="3 Bedroom">3 Bedroom</option>
+                                <option value="4 Bedroom">4 Bedroom</option>
+                                <option value="5 Bedroom">5 Bedroom</option>
+                                <option value="6 Bedroom">6 Bedroom</option>
+                                <option value="7+ Bedroom">7+ Bedroom</option>
+                              </select>
+                            </div>
                           </div>
+
+                          <div className="form-group row">
+                            <div class="col-md-6 mb-3 mb-lg-0">
+                              <input
+                                name="mobileNumber"
+                                id="mobileNumber"
+                                type="text"
+                                className="form-control"
+                                placeholder="From Suburb"
+                                required
+                                maxlength="20"
+                                value={fromSub}
+                                onChange={(e) => setFromSub(e.target.value)}
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <input
+                                name="mobileNumber"
+                                id="mobileNumber"
+                                type="text"
+                                className="form-control"
+                                placeholder="To Suburb"
+                                required
+                                maxlength="20"
+                                value={toSub}
+                                onChange={(e) => setToSub(e.target.value)}
+                              />
+                            </div>
+                          </div>
+
                           <div className="form-group">
                             <input
                               type="submit"
@@ -356,31 +369,17 @@ const Landing = () => {
                         </form>
                       </div>
 
-                      <div className="col-lg-6 mb-4">
+                      <div className="col-lg-5 mb-4">
                         <h1 data-aos="fade-up" data-aos-delay="100">
-                        Removalists NSW
-                        Affordable Furniture Removals
+                          Removalists NSW Affordable Furniture Removals
                         </h1>
                         <p
                           className="mb-4"
                           data-aos="fade-up"
                           data-aos-delay="150"
                         >
-                          A moving man is only as good as a moving van, or
-                          removalist truck. All of our moving trucks and vans
-                          are kitted out with modern and highly maintained
-                          equipment to make loading and unloading easy, and
-                          transit safe.
-                          <br /> Whether you are moving local or interstate, you
-                          can enjoy peace of mind knowing that all household
-                          items will be strapped down, secure and in sturdy
-                          moving boxes. Our fleet of removal trucks is made up
-                          of a range of different vehicles with different sizes
-                          and capacities, meaning that whatever the job, you
-                          enjoy a stress free move.
-                          <br />
-                          For any questions about truck sizes, do not hesitate
-                          to call our head office on <b>+610413358050</b>.
+                          We Are Sydney's Highest Rated Removalist Company & The
+                          Most Affordable! Includes Unlimited FREE Moving Boxes.
                         </p>
 
                         <p data-aos="fade-up" data-aos-delay="200">
@@ -400,32 +399,34 @@ const Landing = () => {
           </div>
         </div>
 
-        {/* <div className="site-section pb-0">
-          <div className="future-blobs">
-            <div className="blob_2">
-              <LazyLoadImage src="assets/images/images/blob_1.svg" alt="Image" />
+        <Card />
+
+        <div class="site-section pb-0">
+          <div class="future-blobs">
+            <div class="blob_2">
+              <img src="assets/images/deco_1.svg" alt="Image" />
             </div>
-            <div className="blob_1">
-              <LazyLoadImage src="assets/images/images/blob_2.svg" alt="Image" />
+            <div class="blob_1">
+              <img src="assets/images/deco_2.svg" alt="Image" />
             </div>
           </div>
-          <div className="container">
+          <div class="container">
             <div
-              className="row mb-5 justify-content-center"
+              class="row mb-5 justify-content-center"
               data-aos="fade-up"
               data-aos-delay=""
             >
-              <div className="col-lg-7 text-center">
-                <h2 className="section-title">Why Choose Us</h2>
+              <div class="col-lg-7 text-center">
+                <h2 class="section-title">Why Choose Us</h2>
               </div>
             </div>
-            <div className="row">
+            <div class="row">
               <div
-                className="col-lg-4 ml-auto align-self-start"
+                class="col-lg-4 ml-auto align-self-start"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <div className="p-4 rounded bg-white why-choose-us-box">
+                <div class="p-4 rounded bg-white why-choose-us-box">
                   <div
                     className="
                         d-flex
@@ -495,7 +496,7 @@ const Landing = () => {
                         align-items-center
                         custom-icon-wrap custom-icon-light
                         mb-3
-                    "
+                     "
                   >
                     <div className="mr-3">
                       <span className="custom-icon-inner">
@@ -536,6 +537,7 @@ const Landing = () => {
                         d-flex
                         align-items-center
                         custom-icon-wrap custom-icon-light
+                        mb-3
                     "
                   >
                     <div className="mr-3">
@@ -553,173 +555,12 @@ const Landing = () => {
                 </div>
               </div>
               <div
-                className="col-lg-7 align-self-end"
-                data-aos="fade-left"
-                data-aos-delay="200"
-              >
-                <LazyLoadImage
-                  src="assets/images/truck5.png"
-                  alt="Image"
-                  className="img-fluid"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        <div class="site-section pb-0">
-          <div class="future-blobs">
-            <div class="blob_2">
-              <img src="assets/images/deco_1.svg" alt="Image" />
-            </div>
-            <div class="blob_1">
-              <img src="assets/images/deco_2.svg" alt="Image" />
-            </div>
-          </div>
-          <div class="container">
-            <div
-              class="row mb-5 justify-content-center"
-              data-aos="fade-up"
-              data-aos-delay=""
-            >
-              <div class="col-lg-7 text-center">
-                <h2 class="section-title">Why Choose Us</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div
-                class="col-lg-4 ml-auto align-self-start"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <div class="p-4 rounded bg-white why-choose-us-box">
-                  <div
-                    class="
-                    d-flex
-                    align-items-center
-                    custom-icon-wrap custom-icon-light
-                    mb-3
-                  "
-                  >
-                    <div class="mr-3">
-                      <span class="custom-icon-inner">
-                        <span class="icon icon-graduation-cap"></span>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 class="m-0">All Tutors from IITs</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                    d-flex
-                    align-items-center
-                    custom-icon-wrap custom-icon-light
-                    mb-3
-                  "
-                  >
-                    <div class="mr-3">
-                      <span class="custom-icon-inner">
-                        <span class="icon icon-university"></span>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 class="m-0">25 Live Interactive Classes per month</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                    d-flex
-                    align-items-center
-                    custom-icon-wrap custom-icon-light
-                    mb-3
-                  "
-                  >
-                    <div class="mr-3">
-                      <span class="custom-icon-inner">
-                        <span class="icon icon-graduation-cap"></span>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 class="m-0">Individual attention to each student</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                    d-flex
-                    align-items-center
-                    custom-icon-wrap custom-icon-light
-                    mb-3
-                  "
-                  >
-                    <div class="mr-3">
-                      <span class="custom-icon-inner">
-                        <span class="icon icon-university"></span>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 class="m-0">Two tests every week</h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                    d-flex
-                    align-items-center
-                    custom-icon-wrap custom-icon-light
-                    mb-3
-                  "
-                  >
-                    <div class="mr-3">
-                      <span class="custom-icon-inner">
-                        <span class="icon icon-graduation-cap"></span>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 class="m-0">
-                        Career Guidance &amp; Mentorships sessions every month
-                      </h3>
-                    </div>
-                  </div>
-
-                  <div
-                    class="
-                    d-flex
-                    align-items-center
-                    custom-icon-wrap custom-icon-light
-                  "
-                  >
-                    <div class="mr-3">
-                      <span class="custom-icon-inner">
-                        <span class="icon icon-university"></span>
-                      </span>
-                    </div>
-                    <div>
-                      <h3 class="m-0">
-                        Guidance in Entrepreneurship &amp; Coding Domains
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-                <a
-                  href="#home-section"
-                  data-aos-delay="400"
-                  class="btn btn-primary py-3 px-5 btn-pill"
-                  style={{ marginTop: "20px" }}
-                >
-                  Book your free demo class now
-                </a>
-              </div>
-              <div
                 class="col-lg-7 align-self-end"
                 data-aos="fade-left"
                 data-aos-delay="200"
               >
                 <img
-                  src="assets/images/remove.png"
+                  src="assets/images/engg.png"
                   alt="Image"
                   class="img-fluid"
                 />
@@ -781,6 +622,7 @@ const Landing = () => {
             </div>
           </div>
         </div>
+
         <Review />
 
         <Faq />
