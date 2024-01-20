@@ -27,10 +27,11 @@ const Landing = () => {
   const [toSub, setToSub] = useState("");
   const [confirm, setConfirm] = useState(false);
   const navigate = useNavigate();
-
+   
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownOpen1, setDropdownOpen1] = useState(false);
   const [dropdownOpen2, setDropdownOpen2] = useState(false);
+ 
 
   const collectData = async (e) => {
     ReactGA.event({
@@ -108,11 +109,11 @@ const Landing = () => {
               <div className="d-flex align-items-end">
                 <div className="site-logo mr-auto w-100">
                   <a href="/">
-                    {/* <LazyLoadImage src="assets/images/logo.jpg" />  */}
-                    <span
+                    <LazyLoadImage style={{borderRadius:"50px"}} src="assets/images/icon.jpg" /> 
+                    {/* <span
                       className="icon icon-truck"
                       style={{ color: "yellow" }}
-                    ></span>
+                    ></span> */}
                     Prime Removals<span style={{ color: "yellow" }}> &</span>
                     Storage
                   </a>
@@ -131,11 +132,10 @@ const Landing = () => {
                       mr-auto
                       d-none d-lg-block
                       m-0
-                      p-0
+                      p-3
                         "
-                    >
-                                          {/* 3rd li */}
-                                          <li class="cta">
+                     >               
+                        <li class="cta">
                         <a class="nav-link">
                           <span
                             onClick={() => {
@@ -161,7 +161,7 @@ const Landing = () => {
                               <FaMapPin/>
                                 Interstate Removalists Australia-Wide  
                               </a>
-                              <a style={{ display: "block" }}>
+                              <a  style={{ display: "block" }}>
                               <FaMapPin/>
                                 Interstate Removalists Adelaide
                               </a>
@@ -178,12 +178,12 @@ const Landing = () => {
                               <FaMapPin/>
                                 Interstate Removalists Gold Coast
                               </a>
-                              <a style={{ display: "block" }}>
+                              <a  style={{ display: "block" }}>
                               <FaMapPin/>
                                 Interstate Removalists Melbourne
                               </a>
 
-                              <a style={{ display: "block" }}>
+                              <a  style={{ display: "block" }}>
                               <FaMapPin/>
                                 Interstate Removalists Perth
                               </a>
@@ -198,7 +198,7 @@ const Landing = () => {
                           )}
                         </a>
                       </li>
-                      {/* 1st li */}
+                 
                       <li class="cta">
                         <a class="nav-link">
                           <span
@@ -262,7 +262,7 @@ const Landing = () => {
                           )}
                         </a>
                       </li>
-                      {/* 2nd li */}
+                       
                       <li class="cta">
                         <a class="nav-link">
                           <span
@@ -326,8 +326,6 @@ const Landing = () => {
                           )}
                         </a>
                       </li>
-
-
                       <li class="cta">
                         <a href="tel:0413358050" class="nav-link">
                           <span>
@@ -341,9 +339,10 @@ const Landing = () => {
                           <span>Get Quote</span>
                         </a>
                       </li>
+
                     </ul>
                   </nav>
-                  <a
+                  {/* <a
                     href="/"
                     className="
                   d-inline-block d-lg-none
@@ -354,7 +353,7 @@ const Landing = () => {
                  "
                   >
                     <span className="icon-menu h3"></span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
