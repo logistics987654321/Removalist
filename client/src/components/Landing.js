@@ -139,6 +139,8 @@ const Landing = () => {
                         <a class="nav-link">
                           <span
                             onClick={() => {
+                              setDropdownOpen1(false);
+                              setDropdownOpen(false);
                               setDropdownOpen2(!dropdownOpen2);
                             }}
                           >
@@ -201,7 +203,9 @@ const Landing = () => {
                         <a class="nav-link">
                           <span
                             onClick={() => {
+                              setDropdownOpen1(false);
                               setDropdownOpen(!dropdownOpen);
+                              setDropdownOpen2(false);
                             }}
                           >
                             Country Moves
@@ -264,6 +268,8 @@ const Landing = () => {
                           <span
                             onClick={() => {
                               setDropdownOpen1(!dropdownOpen1);
+                              setDropdownOpen(false);
+                              setDropdownOpen2(false);
                             }}
                           >
                             Interstate Moves
