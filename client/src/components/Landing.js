@@ -11,9 +11,7 @@ import ReactGA from "react-ga";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsChevronDown } from "react-icons/bs";
 import { FaMobileAlt } from "react-icons/fa";
-import DropdownMenu from "./DropdownMenu";
-import DropdownMenu2 from "./DropdownMenu2";
-import DropdownMenu3 from "./DropdownMenu3";
+import { FaMapPin } from "react-icons/fa";
 
 const Landing = () => {
   useEffect(() => {
@@ -30,15 +28,9 @@ const Landing = () => {
   const [confirm, setConfirm] = useState(false);
   const navigate = useNavigate();
 
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-
-  const handleMouseEnter = () => {
-    setDropdownVisible(true);
-  };
-
-  const handleMouseLeave = () => {
-    setDropdownVisible(false);
-  };
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownOpen1, setDropdownOpen1] = useState(false);
+  const [dropdownOpen2, setDropdownOpen2] = useState(false);
 
   const collectData = async (e) => {
     ReactGA.event({
@@ -113,7 +105,7 @@ const Landing = () => {
             role="banner"
           >
             <div className="container-fluid">
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-end">
                 <div className="site-logo mr-auto w-100">
                   <a href="/">
                     {/* <LazyLoadImage src="assets/images/logo.jpg" />  */}
@@ -142,50 +134,194 @@ const Landing = () => {
                       p-0
                         "
                     >
-                      <li class="cta">
+                                          {/* 3rd li */}
+                                          <li class="cta">
                         <a class="nav-link">
-                          <span>
+                          <span
+                            onClick={() => {
+                              setDropdownOpen2(!dropdownOpen2);
+                            }}
+                          >
                             Areas we service
                             <BsChevronDown style={{ fontSize: "20px" }} />
                           </span>
-                          <div className="dropdown-content">
-                            <a href="#home">Link1</a>
-                            <a href="#home">Link2</a>
-                            <a href="#home">Link3</a>
-                            <a href="#home">Link4</a>
-                          </div>
+                          {dropdownOpen2 ? (
+                            <div
+                              style={{
+                                background: "white",
+                                marginTop: "11px",
+                                borderRadius: "20px",
+                                padding: "5px",
+                                position: "fixed",
+                              }}
+                            >
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Australia-Wide  
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Adelaide
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Brisbane
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Canberra
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Gold Coast
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Melbourne
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Perth
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Sydney
+                              </a>
+                            </div>
+                          ) : (
+                            <div></div>
+                          )}
                         </a>
                       </li>
+                      {/* 1st li */}
                       <li class="cta">
                         <a class="nav-link">
-                          <span>
-                            Interstate Moves{" "}
+                          <span
+                            onClick={() => {
+                              setDropdownOpen(!dropdownOpen);
+                            }}
+                          >
+                            Country Moves
                             <BsChevronDown style={{ fontSize: "20px" }} />
                           </span>
+                          {dropdownOpen ? (
+                            <div
+                              style={{
+                                background: "white",
+                                marginTop: "11px",
+                                borderRadius: "20px",
+                                padding: "5px",
+                                position: "fixed",
+                              }}
+                            >
+                               <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Australia-Wide  
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Adelaide
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Brisbane
+                              </a>
 
-                          <div className="dropdown-content">
-                            <a href="#home">Link1</a>
-                            <a href="#home">Link2</a>
-                            <a href="#home">Link3</a>
-                            <a href="#home">Link4</a>
-                          </div>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Canberra
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Gold Coast
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Melbourne
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Perth
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Sydney
+                              </a>
+                            </div>
+                          ) : (
+                            <div></div>
+                          )}
                         </a>
                       </li>
+                      {/* 2nd li */}
                       <li class="cta">
                         <a class="nav-link">
-                          <span>
-                            Country Moves{" "}
+                          <span
+                            onClick={() => {
+                              setDropdownOpen1(!dropdownOpen1);
+                            }}
+                          >
+                            Interstate Moves
                             <BsChevronDown style={{ fontSize: "20px" }} />
                           </span>
+                          {dropdownOpen1 ? (
+                            <div
+                              style={{
+                                background: "white",
+                                marginTop: "11px",
+                                borderRadius: "20px",
+                                padding: "5px",
+                                position: "fixed",
+                              }}
+                            >
+                               <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Australia-Wide  
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Adelaide
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Brisbane
+                              </a>
 
-                          <div className="dropdown-content">
-                            <a href="#home">Link1</a>
-                            <a href="#home">Link2</a>
-                            <a href="#home">Link3</a>
-                            <a href="#home">Link4</a>
-                          </div>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Canberra
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Gold Coast
+                              </a>
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Melbourne
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Perth
+                              </a>
+
+                              <a style={{ display: "block" }}>
+                              <FaMapPin/>
+                                Interstate Removalists Sydney
+                              </a>
+                            </div>
+                          ) : (
+                            <div></div>
+                          )}
                         </a>
                       </li>
+
+
                       <li class="cta">
                         <a href="tel:0413358050" class="nav-link">
                           <span>
@@ -270,20 +406,19 @@ const Landing = () => {
                               />
                             </div>
                             <div class="col-md-4">
-                            <input
-                              name="mobileNumber"
-                              id="mobileNumber"
-                              type="number"
-                              className="form-control"
-                              placeholder="Phone Number*"
-                              required
-                              maxlength="10"
-                              value={mobile}
-                              onChange={(e) => setMobile(e.target.value)}
-                            />
+                              <input
+                                name="mobileNumber"
+                                id="mobileNumber"
+                                type="number"
+                                className="form-control"
+                                placeholder="Phone Number*"
+                                required
+                                maxlength="10"
+                                value={mobile}
+                                onChange={(e) => setMobile(e.target.value)}
+                              />
                             </div>
                           </div>
- 
 
                           <div className="form-group row">
                             <div class="col-md-6 mb-3 mb-lg-0">
@@ -378,7 +513,7 @@ const Landing = () => {
                           data-aos="fade-up"
                           data-aos-delay="150"
                         >
-                          We Are Sydney's Highest Rated Removalist Company & The
+                          We Are NSW's Highest Rated Removalist Company & The
                           Most Affordable! Includes Unlimited FREE Moving Boxes.
                         </p>
 

@@ -965,7 +965,6 @@ details[open] div{
 /* droppdown Menu */
 
  
- 
 .dropdown-content {
   display: none;
   background: #f1f1f1;
@@ -991,8 +990,7 @@ details[open] div{
   display: block;
 }
 
-.dropdown:hover .dropbtn {
-  background: #3e8341;
-}
+
+ 
 
 
