@@ -12,6 +12,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsChevronDown } from "react-icons/bs";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaMapPin } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const Landing = () => {
   useEffect(() => {
@@ -518,8 +519,11 @@ const Landing = () => {
                           data-aos="fade-up"
                           data-aos-delay="150"
                         >
-                          We Are NSW's Highest Rated Removalist Company & The
-                          Most Affordable! Includes Unlimited FREE Moving Boxes.
+
+                           We Are NSW's Highest Rated Removalist Company & The
+                          Most Affordable! Includes Unlimited FREE Moving Boxes.<br/>
+                          By
+                        <FcGoogle style={{fontSize:"50px"}}/>
                         </p>
 
                         <p data-aos="fade-up" data-aos-delay="200">
