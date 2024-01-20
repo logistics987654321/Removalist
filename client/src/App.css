@@ -728,6 +728,8 @@ details[open] div{
   background-color: #121212;
 
   overflow: hidden;
+  max-height: 50;
+  max-width: 50;
 
   position: relative;
 }

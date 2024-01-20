@@ -6,7 +6,7 @@ const Faq = () => {
     <>
 
       <div
-        className="site-section"
+        className="col-lg-12 site-section"
         id="programs-section"
         style={{ backgroundColor: "black" }}
       >
