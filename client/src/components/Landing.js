@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Slidder from "./Slidder";
@@ -9,13 +9,16 @@ import Card from "./Card";
 import Review from "./Review";
 import ReactGA from "react-ga";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { BsChevronDown } from "react-icons/bs";
+import { FaMobileAlt } from "react-icons/fa";
+import DropdownMenu from "./DropdownMenu";
+import DropdownMenu2 from "./DropdownMenu2";
+import DropdownMenu3 from "./DropdownMenu3";
 
 const Landing = () => {
-
-  useEffect(()=>{
+  useEffect(() => {
     ReactGA.pageview(window.location.pathname);
-  },[]);
+  }, []);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -27,12 +30,22 @@ const Landing = () => {
   const [confirm, setConfirm] = useState(false);
   const navigate = useNavigate();
 
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const handleMouseEnter = () => {
+    setDropdownVisible(true);
+  };
+
+  const handleMouseLeave = () => {
+    setDropdownVisible(false);
+  };
+
   const collectData = async (e) => {
-     ReactGA.event({
+    ReactGA.event({
       category: "Test",
       action: "submit",
-      label: "testing"
-     })
+      label: "testing",
+    });
     e.preventDefault();
     const data = { type: moveType, size: moveSize };
     toast.success("Booked Successfully", {
@@ -129,19 +142,62 @@ const Landing = () => {
                       p-0
                         "
                     >
-                      <li
-                        className="cta"
-                        style={{
-                          marginLeft: "5px",
-                          color: "yellow",
-                          fontFamily: "icomoon",
-                        }}
-                      >
-                        {/* <b>+610413358050</b> */}
+                      <li class="cta">
+                        <a
+                          class="nav-link"
+                        >
+                          <span>
+                          Areas we service
+                            <BsChevronDown style={{ fontSize: "20px" }} />
+                          </span>
+                          <div className="dropdown-content">
+                            <a href="#home">Link1</a>
+                            <a href="#home">Link2</a>
+                            <a href="#home">Link3</a>
+                            <a href="#home">Link4</a>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="cta">
+                        <a  class="nav-link">
+                          <span>Interstate Moves     <BsChevronDown style={{ fontSize: "20px" }} /></span>
+                     
+                          <div className="dropdown-content">
+                            <a href="#home">Link1</a>
+                            <a href="#home">Link2</a>
+                            <a href="#home">Link3</a>
+                            <a href="#home">Link4</a>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="cta">
+                        <a
+                
+                          class="nav-link"
+                        >
+                          <span>Country Moves <BsChevronDown style={{ fontSize: "20px" }} /></span>
+                       
+                          <div className="dropdown-content">
+                            <a href="#home">Link1</a>
+                            <a href="#home">Link2</a>
+                            <a href="#home">Link3</a>
+                            <a href="#home">Link4</a>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="cta">
+                        <a href="tel:0413358050" class="nav-link">
+                          <span><FaMobileAlt style={{fontSize:"20px"}}/>+610413358050</span>
+                        </a>
+                      </li>
+                      <li class="cta">
+                        <a href="/" class="nav-link">
+                          <span>Get Quote</span>
+                        </a>
                       </li>
                     </ul>
                   </nav>
-                  {/* <a
+                  <a
                     href="/"
                     className="
                   d-inline-block d-lg-none
@@ -152,7 +208,7 @@ const Landing = () => {
                  "
                   >
                     <span className="icon-menu h3"></span>
-                  </a> */}
+                  </a>
                 </div>
               </div>
             </div>
@@ -162,7 +218,7 @@ const Landing = () => {
             <div
               className="slide-1"
               style={{
-                backgroundImage: `url('assets/images/images/main_bg.jpg') !impotant`,
+                backgroundImage: `url('assets/images/images/bg.jpeg')`,
               }}
               data-stellar-background-ratio="0.5"
             >
@@ -175,52 +231,53 @@ const Landing = () => {
                         className="col-lg-5 ml-auto"
                         data-aos="fade-up"
                         data-aos-delay="200"
-                      >
-                        <form
+                       >
+                       <form
                           action="submit"
                           method="post"
                           className="form-box"
                           onSubmit={collectData}
-                        >
+                         >
                           <h3 className="h4 text-black mb-4">
                             <b>Book Your Truck</b>
                           </h3>
-                          <div className="form-group">
-                            <input
-                              id="name"
-                              type="text"
-                              className="form-control"
-                              placeholder="Full Name*"
-                              required="true"
-                              value={name}
-                              onChange={(e) => setName(e.target.value)}
-                            />
-                          </div>
-                          <div className="form-group">
-                            <input
-                              name="email"
-                              id="email"
-                              type="text"
-                              class="form-control"
-                              placeholder="Email"
-                              required
-                              value={email}
-                              onChange={(e) => setEmail(e.target.value)}
-                            />
-                          </div>
-                          <div className="form-group">
-                            <input
-                              name="mobileNumber"
-                              id="mobileNumber"
-                              type="number"
-                              className="form-control"
-                              placeholder="WhatsApp Number*"
-                              required
-                              maxlength="10"
-                              value={mobile}
-                              onChange={(e) => setMobile(e.target.value)}
-                            />
-                          </div>
+                              <div className="form-group">
+                                  <input
+                                    id="name"
+                                    type="text"
+                                    className="form-control"
+                                    placeholder="Full Name*"
+                                    required="true"
+                                    value={name}
+                                    onChange={(e) => setName(e.target.value)}
+                                  />
+                                </div>
+                                  <div className="form-group">
+                                    <input
+                                      name="email"
+                                      id="email"
+                                      type="text"
+                                      class="form-control"
+                                      placeholder="Email"
+                                      required
+                                      value={email}
+                                      onChange={(e) => setEmail(e.target.value)}
+                                    />
+                                  </div>
+                                  <div className="form-group">
+                                    <input
+                                      name="mobileNumber"
+                                      id="mobileNumber"
+                                      type="number"
+                                      className="form-control"
+                                      placeholder="Phone Number*"
+                                      required
+                                      maxlength="10"
+                                      value={mobile}
+                                      onChange={(e) => setMobile(e.target.value)}
+                                    />
+                                  </div>
+                 
 
                           <div className="form-group">
                             <select
@@ -301,7 +358,8 @@ const Landing = () => {
 
                       <div className="col-lg-6 mb-4">
                         <h1 data-aos="fade-up" data-aos-delay="100">
-                          Best Quality Trucks
+                        Removalists NSW
+                        Affordable Furniture Removals
                         </h1>
                         <p
                           className="mb-4"
@@ -341,17 +399,14 @@ const Landing = () => {
             </div>
           </div>
         </div>
-        {/* 
-        <h1>{moveType}</h1>
-        <h1>{moveSize}</h1> */}
 
-        <div className="site-section pb-0">
+        {/* <div className="site-section pb-0">
           <div className="future-blobs">
             <div className="blob_2">
-              <LazyLoadImage src="assets/images/deco_2.svg" alt="Image" />
+              <LazyLoadImage src="assets/images/images/blob_1.svg" alt="Image" />
             </div>
             <div className="blob_1">
-              <LazyLoadImage src="assets/images/deco_1.svg" alt="Image" />
+              <LazyLoadImage src="assets/images/images/blob_2.svg" alt="Image" />
             </div>
           </div>
           <div className="container">
@@ -510,6 +565,167 @@ const Landing = () => {
               </div>
             </div>
           </div>
+        </div> */}
+
+        <div class="site-section pb-0">
+          <div class="future-blobs">
+            <div class="blob_2">
+              <img src="assets/images/deco_1.svg" alt="Image" />
+            </div>
+            <div class="blob_1">
+              <img src="assets/images/deco_2.svg" alt="Image" />
+            </div>
+          </div>
+          <div class="container">
+            <div
+              class="row mb-5 justify-content-center"
+              data-aos="fade-up"
+              data-aos-delay=""
+            >
+              <div class="col-lg-7 text-center">
+                <h2 class="section-title">Why Choose Us</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div
+                class="col-lg-4 ml-auto align-self-start"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="p-4 rounded bg-white why-choose-us-box">
+                  <div
+                    class="
+                    d-flex
+                    align-items-center
+                    custom-icon-wrap custom-icon-light
+                    mb-3
+                  "
+                  >
+                    <div class="mr-3">
+                      <span class="custom-icon-inner">
+                        <span class="icon icon-graduation-cap"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="m-0">All Tutors from IITs</h3>
+                    </div>
+                  </div>
+
+                  <div
+                    class="
+                    d-flex
+                    align-items-center
+                    custom-icon-wrap custom-icon-light
+                    mb-3
+                  "
+                  >
+                    <div class="mr-3">
+                      <span class="custom-icon-inner">
+                        <span class="icon icon-university"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="m-0">25 Live Interactive Classes per month</h3>
+                    </div>
+                  </div>
+
+                  <div
+                    class="
+                    d-flex
+                    align-items-center
+                    custom-icon-wrap custom-icon-light
+                    mb-3
+                  "
+                  >
+                    <div class="mr-3">
+                      <span class="custom-icon-inner">
+                        <span class="icon icon-graduation-cap"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="m-0">Individual attention to each student</h3>
+                    </div>
+                  </div>
+
+                  <div
+                    class="
+                    d-flex
+                    align-items-center
+                    custom-icon-wrap custom-icon-light
+                    mb-3
+                  "
+                  >
+                    <div class="mr-3">
+                      <span class="custom-icon-inner">
+                        <span class="icon icon-university"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="m-0">Two tests every week</h3>
+                    </div>
+                  </div>
+
+                  <div
+                    class="
+                    d-flex
+                    align-items-center
+                    custom-icon-wrap custom-icon-light
+                    mb-3
+                  "
+                  >
+                    <div class="mr-3">
+                      <span class="custom-icon-inner">
+                        <span class="icon icon-graduation-cap"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="m-0">
+                        Career Guidance &amp; Mentorships sessions every month
+                      </h3>
+                    </div>
+                  </div>
+
+                  <div
+                    class="
+                    d-flex
+                    align-items-center
+                    custom-icon-wrap custom-icon-light
+                  "
+                  >
+                    <div class="mr-3">
+                      <span class="custom-icon-inner">
+                        <span class="icon icon-university"></span>
+                      </span>
+                    </div>
+                    <div>
+                      <h3 class="m-0">
+                        Guidance in Entrepreneurship &amp; Coding Domains
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <a
+                  href="#home-section"
+                  data-aos-delay="400"
+                  class="btn btn-primary py-3 px-5 btn-pill"
+                  style={{ marginTop: "20px" }}
+                >
+                  Book your free demo class now
+                </a>
+              </div>
+              <div
+                class="col-lg-7 align-self-end"
+                data-aos="fade-left"
+                data-aos-delay="200"
+              >
+                <img
+                  src="assets/images/remove.png"
+                  alt="Image"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div
@@ -566,8 +782,6 @@ const Landing = () => {
           </div>
         </div>
         <Review />
-
-        <Card />
 
         <Faq />
 
