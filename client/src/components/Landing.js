@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Slidder from "./Slidder";
@@ -11,8 +11,8 @@ import ReactGA from "react-ga";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { BsChevronDown } from "react-icons/bs";
 import { FaMobileAlt } from "react-icons/fa";
-import { FaMapPin } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { FaBoxOpen } from "react-icons/fa";
 
 const Landing = () => {
   useEffect(() => {
@@ -28,11 +28,22 @@ const Landing = () => {
   const [toSub, setToSub] = useState("");
   const [confirm, setConfirm] = useState(false);
   const navigate = useNavigate();
-   
+  const refOne = useRef(null);
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [dropdownOpen1, setDropdownOpen1] = useState(false);
   const [dropdownOpen2, setDropdownOpen2] = useState(false);
- 
+  // useEffect(() => {
+  //   document.addEventListener("click", handleClickOut, true);
+  // });
+
+  // const handleClickOut = (e) => {
+  //   if (!refOne.current.contains(e.target)) {
+  //     setDropdownOpen(false);
+  //   } else {
+  //     console.log("click in");
+  //   }
+  // };
 
   const collectData = async (e) => {
     ReactGA.event({
@@ -110,11 +121,10 @@ const Landing = () => {
               <div className="d-flex align-items-end">
                 <div className="site-logo mr-auto w-100">
                   <a href="/">
-                    <LazyLoadImage style={{borderRadius:"50px"}} src="assets/images/icon.jpg" /> 
-                    {/* <span
-                      className="icon icon-truck"
-                      style={{ color: "yellow" }}
-                    ></span> */}
+                    <LazyLoadImage
+                      style={{ borderRadius: "50px" }}
+                      src="assets/images/icon.jpg"
+                    />
                     Prime Removals<span style={{ color: "yellow" }}> &</span>
                     Storage
                   </a>
@@ -135,10 +145,11 @@ const Landing = () => {
                       m-0
                       p-3
                         "
-                     >               
-                        <li class="cta">
+                    >
+                      <li class="cta">
                         <a class="nav-link">
                           <span
+                            ref={refOne}
                             onClick={() => {
                               setDropdownOpen1(false);
                               setDropdownOpen(false);
@@ -158,48 +169,51 @@ const Landing = () => {
                                 position: "fixed",
                               }}
                             >
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Australia-Wide  
-                              </a>
-                              <a  style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Adelaide
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Brisbane
-                              </a>
+                              <h5 style={{ textAlign: "center",color:"black"}}>
+                                Country Moves
+                              </h5>
+                              <div className="contain">
+                                <div class="column">
+                                  <p className="heading">Inner West Suburbs</p>
+                                  <p className="heading">Eastern Suburbs</p>
+                                  <p className="heading">Western Suburbs</p>
 
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Canberra
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Gold Coast
-                              </a>
-                              <a  style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Melbourne
-                              </a>
+                                  <p className="heading">Southern Suburbs</p>
+                                  <p className="heading">North West Suburbs</p>
+                                  <p className="heading">Northern Suburbs</p>
+                                  <p className="heading">NSW Suburbs</p>
+                                </div>
+                                <div class="column">
+                                  <p className="subHead">
+                                    Inner West Suburbs Removalists
+                                  </p>
+                                  <p className="subHead">
+                                    Removalists Annandale
+                                  </p>
+                                  <p className="subHead">
+                                    Removalists Canterbury
+                                  </p>
+                                </div>
 
-                              <a  style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Perth
-                              </a>
-
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Sydney
-                              </a>
+                                <div class="column">
+                                  <p className="subHead">
+                                    Inner West Suburbs Removalists
+                                  </p>
+                                  <p className="subHead">
+                                    Removalists Annandale
+                                  </p>
+                                  <p className="subHead">
+                                    Removalists Canterbury
+                                  </p>
+                                </div>
+                              </div>
                             </div>
                           ) : (
                             <div></div>
                           )}
                         </a>
                       </li>
-                 
+
                       <li class="cta">
                         <a class="nav-link">
                           <span
@@ -222,48 +236,62 @@ const Landing = () => {
                                 position: "fixed",
                               }}
                             >
-                               <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Australia-Wide  
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Adelaide
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Brisbane
-                              </a>
+                              <h5 style={{ textAlign: "center",color:"black"}}>
+                                Country Moves
+                              </h5>
 
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Canberra
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Gold Coast
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Melbourne
-                              </a>
+                              <div className="contain">
+                                <div class="column">
+                                  <p
+                                    className="subHead"
+                                    style={{ textAlign: "center" }}
+                                  >
+                                    NORTH
+                                  </p>
+                                  <p className="subHead">NSW to Broken Hill</p>
+                                  <p className="subHead">NSW to Byron Bay</p>
+                                  <p className="subHead">
+                                    NSW to Central Coast
+                                  </p>
+                                  <p className="subHead">
+                                    NSW to Coffs Harbour
+                                  </p>
+                                  <p className="subHead">NSW to Gosford</p>
+                                  <p className="subHead">
+                                    NSW to Hunter Valley
+                                  </p>
+                                  <p className="subHead">NSW to Lismore</p>
+                                  <p className="subHead">NSW to Newcastle</p>
+                                </div>
 
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Perth
-                              </a>
-
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Sydney
-                              </a>
+                                <div class="column">
+                                  <p
+                                    className="subHead"
+                                    style={{ textAlign: "center" }}
+                                  >
+                                    SOUTH
+                                  </p>
+                                  <p className="subHead">NSW to Batemans Bay</p>
+                                  <p className="subHead">NSW to Bega</p>
+                                  <p className="subHead">
+                                    NSW to Capital Monaro & Snowy
+                                  </p>
+                                  <p className="subHead">
+                                    NSW to Coonabarabran
+                                  </p>
+                                  <p className="subHead">NSW to Cooma</p>
+                                  <p className="subHead">NSW to Finley</p>
+                                  <p className="subHead">NSW to Kiama</p>
+                                  <p className="subHead">NSW to Goulburn</p>
+                                </div>
+                              </div>
                             </div>
                           ) : (
                             <div></div>
                           )}
                         </a>
                       </li>
-                       
+
                       <li class="cta">
                         <a class="nav-link">
                           <span
@@ -286,47 +314,46 @@ const Landing = () => {
                                 position: "fixed",
                               }}
                             >
-                               <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Australia-Wide  
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Adelaide
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Brisbane
-                              </a>
+                              <h5 style={{ textAlign: "center",color:"black"}}>
+                                Interstate Moves
+                              </h5>
 
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Canberra
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Gold Coast
-                              </a>
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Melbourne
-                              </a>
+                              <div className="contain">
+                                <div class="column">
+                                  <p
+                                    className="subHead"
+                                    style={{ textAlign: "center" }}
+                                  >
+                                    INTERSTATE REMOVALISTS
+                                  </p>
+                                  <p className="subHead">Australia- Wide</p>
+                                  <p className="subHead">Adelaide</p>
+                                  <p className="subHead">Brisbane</p>
+                                  <p className="subHead">Canberra</p>
+                                  <p className="subHead">Gold Coast</p>
+                                  <p className="subHead">Melbourne</p>
+                                  <p className="subHead">Perth</p>
+                                  <p className="subHead">Sydney</p>
+                                </div>
 
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Perth
-                              </a>
+                                <div className="column">
+                                  <div class="promo-box">
+                                    <p>Learn About Our New</p>
+                                    <div style={{display:"flex",justifyContent:"space-between"}}>
+                                    <h5 className="box">FREE<br/> Boxes</h5>
+                                    <FaBoxOpen style={{fontSize:"50px",alignItems:"end"}}/>
+                                    </div>
 
-                              <a style={{ display: "block" }}>
-                              <FaMapPin/>
-                                Interstate Removalists Sydney
-                              </a>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           ) : (
                             <div></div>
                           )}
                         </a>
                       </li>
+
                       <li class="cta">
                         <a href="tel:0413358050" class="nav-link">
                           <span>
@@ -340,7 +367,6 @@ const Landing = () => {
                           <span>Get Quote</span>
                         </a>
                       </li>
-
                     </ul>
                   </nav>
                   {/* <a
@@ -399,7 +425,7 @@ const Landing = () => {
                                 onChange={(e) => setName(e.target.value)}
                               />
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 mb-3 mb-lg-0">
                               <input
                                 name="email"
                                 id="email"
@@ -519,11 +545,11 @@ const Landing = () => {
                           data-aos="fade-up"
                           data-aos-delay="150"
                         >
-
-                           We Are NSW's Highest Rated Removalist Company & The
-                          Most Affordable! Includes Unlimited FREE Moving Boxes.<br/>
+                          We Are NSW's Highest Rated Removalist Company & The
+                          Most Affordable! Includes Unlimited FREE Moving Boxes.
+                          <br />
                           By
-                        <FcGoogle style={{fontSize:"50px"}}/>
+                          <FcGoogle style={{ fontSize: "50px" }} />
                         </p>
 
                         <p data-aos="fade-up" data-aos-delay="200">

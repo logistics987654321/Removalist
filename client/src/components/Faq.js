@@ -9,14 +9,14 @@ const Faq = () => {
         className="col-lg-12 site-section"
         id="programs-section"
         style={{ backgroundColor: "black" }}
-      >
+       >
         <div className="container">
           <div className="row justify-content-center">
             <div
               className="col-lg-9 text-center"
               data-aos="fade-up"
               data-aos-delay=""
-            >
+             >
               <h2 className="section-title" style={{ color: "white" }}>
                 Frequently Asked Questions
               </h2>
@@ -24,7 +24,7 @@ const Faq = () => {
           </div>
 
           <div className="row mb-5 align-items-center">
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay="100" >
               <div class="container">
                 <details>
                   <summary>What Is The Cheapest Day to Move?</summary>
