@@ -1008,7 +1008,7 @@ details[open] div{
   border-bottom: 1px solid lightgray;
 }
 .heading:hover{
-  color: yellow;
+  color: #FFA500;
 }
 .subHead{
   font-family: "roboto";
@@ -1017,16 +1017,16 @@ details[open] div{
   margin-bottom: 0rem;
   font-size: 1rem;
 }
+.subHead:hover{
+  color: #FFA500;
+}
 .column {
   border-right: 10px solid white;
 }
 .column:last-child {
   border-right: none;
 }
-h2 {
-  border-bottom: 1px solid white;
-}
-
+ 
 .promo-box {
   background-color: #FFA500;
   color: white;

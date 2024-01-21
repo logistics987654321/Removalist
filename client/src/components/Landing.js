@@ -39,7 +39,7 @@ const Landing = () => {
 
   // const handleClickOut = (e) => {
   //   if (!refOne.current.contains(e.target)) {
-  //     setDropdownOpen(false);
+  //     console.log("Click out");
   //   } else {
   //     console.log("click in");
   //   }
@@ -169,8 +169,10 @@ const Landing = () => {
                                 position: "fixed",
                               }}
                             >
-                              <h5 style={{ textAlign: "center",color:"black"}}>
-                                Country Moves
+                              <h5
+                                style={{fontWeight:"bold",textAlign: "center", color: "#FFA500",textTransform:"uppercase"}}
+                              >
+                                Areas we service
                               </h5>
                               <div className="contain">
                                 <div class="column">
@@ -236,7 +238,9 @@ const Landing = () => {
                                 position: "fixed",
                               }}
                             >
-                              <h5 style={{ textAlign: "center",color:"black"}}>
+                              <h5
+                              style={{fontWeight:"bold",textAlign: "center", color: "#FFA500",textTransform:"uppercase"}}
+                              >
                                 Country Moves
                               </h5>
 
@@ -314,7 +318,9 @@ const Landing = () => {
                                 position: "fixed",
                               }}
                             >
-                              <h5 style={{ textAlign: "center",color:"black"}}>
+                              <h5
+                                                                style={{fontWeight:"bold",textAlign: "center", color: "#FFA500",textTransform:"uppercase"}}
+                              >
                                 Interstate Moves
                               </h5>
 
@@ -339,11 +345,23 @@ const Landing = () => {
                                 <div className="column">
                                   <div class="promo-box">
                                     <p>Learn About Our New</p>
-                                    <div style={{display:"flex",justifyContent:"space-between"}}>
-                                    <h5 className="box">FREE<br/> Boxes</h5>
-                                    <FaBoxOpen style={{fontSize:"50px",alignItems:"end"}}/>
+                                    <div
+                                      style={{
+                                        display: "flex",
+                                        justifyContent: "space-between",
+                                      }}
+                                    >
+                                      <h5 className="box">
+                                        FREE
+                                        <br /> Boxes
+                                      </h5>
+                                      <FaBoxOpen
+                                        style={{
+                                          fontSize: "50px",
+                                          alignItems: "end",
+                                        }}
+                                      />
                                     </div>
-
                                   </div>
                                 </div>
                               </div>
@@ -529,7 +547,7 @@ const Landing = () => {
                             <input
                               type="submit"
                               className="btn btn-primary btn-pill"
-                              value="Book Now"
+                              value="Get My Quote Now"
                               // onClick={notify}
                             />
                           </div>
