@@ -15,6 +15,9 @@ import { FcGoogle } from "react-icons/fc";
 import { FaBoxOpen } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { SiTrustpilot } from "react-icons/si";
+import { RiBox3Fill } from "react-icons/ri";
 
 const Landing = () => {
   useEffect(() => {
@@ -124,7 +127,11 @@ const Landing = () => {
                 <div className="site-logo mr-auto w-100">
                   <a href="/">
                     <LazyLoadImage
-                      style={{ width:"300px",maxHeight:"200px",borderRadius:"20px"}}
+                      style={{
+                        width: "300px",
+                        maxHeight: "200px",
+                        borderRadius: "20px",
+                      }}
                       src="assets/images/loco2.png"
                     />
                     {/* Prime Removals<span style={{ color: "yellow" }}> &</span>
@@ -267,7 +274,10 @@ const Landing = () => {
                                 <div class="column">
                                   <p
                                     className="subHead"
-                                    style={{ textAlign: "center",color:"#7C0CDA"}}
+                                    style={{
+                                      textAlign: "center",
+                                      color: "#7C0CDA",
+                                    }}
                                   >
                                     NORTH
                                   </p>
@@ -290,7 +300,10 @@ const Landing = () => {
                                 <div class="column">
                                   <p
                                     className="subHead"
-                                    style={{ textAlign: "center",color:"#7C0CDA"}}
+                                    style={{
+                                      textAlign: "center",
+                                      color: "#7C0CDA",
+                                    }}
                                   >
                                     SOUTH
                                   </p>
@@ -355,7 +368,10 @@ const Landing = () => {
                                 <div class="column">
                                   <p
                                     className="subHead"
-                                    style={{ textAlign: "center",color:"#7C0CDA"}}
+                                    style={{
+                                      textAlign: "center",
+                                      color: "#7C0CDA",
+                                    }}
                                   >
                                     INTERSTATE REMOVALISTS
                                   </p>
@@ -585,25 +601,129 @@ const Landing = () => {
                         <h1 data-aos="fade-up" data-aos-delay="100">
                           Removalists NSW Affordable Furniture Removals
                         </h1>
-                        <FcGoogle style={{ fontSize: "50px" }} />
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                          }}
+                        >
+                          <FcGoogle style={{ fontSize: "50px" }} />
+                          <FaFacebook
+                            style={{ fontSize: "50px", color: "yellow" }}
+                          />
+                          <SiTrustpilot style={{ fontSize: "50px" , color: "yellow" }} />
+                          <RiBox3Fill style={{ fontSize: "50px" , color: "yellow" }} />
+                        </div>
+
                         <p
                           className="mb-4"
                           data-aos="fade-up"
                           data-aos-delay="150"
                         >
-                        <span style={{color:"white",fontWeight:"bold"}}>4.7</span>
-                        <FaStar style={{fontSize:"10px",color:"#D2DB0C"}}/>
-                        <FaStar style={{fontSize:"10px",color:"#D2DB0C"}}/>
-                        <FaStar style={{fontSize:"10px",color:"#D2DB0C"}}/>
-                        <FaStar style={{fontSize:"10px",color:"#D2DB0C"}}/>
-                       <FaStarHalf style={{fontSize:"10px",color:"#D2DB0C"}}/>
-                       <br/>
-                       <span style={{color:"white",fontWeight:"bold"}}>      We Are NSW's Highest Rated Removalist Company & The
-                          Most Affordable! Includes Unlimited FREE Moving Boxes.</span>
-                    
-                        
-                    
-                          
+                          <div
+                            style={{
+                              display: "flex",
+                              justifyContent: "space-between",
+                            }}
+                          >
+                            <div>
+                              <span
+                                style={{ color: "white", fontWeight: "bold" }}
+                              >
+                                4.7
+                              </span>
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStarHalf
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                            </div>
+
+                            <div>
+                              <span
+                                style={{ color: "white", fontWeight: "bold" }}
+                              >
+                                4.9
+                              </span>
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStarHalf
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                            </div>
+                            <div>
+                              <span
+                                style={{ color: "white", fontWeight: "bold" }}
+                              >
+                                4.8
+                              </span>
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStarHalf
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                            </div>
+                            <div>
+                              <span
+                                style={{ color: "white", fontWeight: "bold" }}
+                              >
+                                4.5
+                              </span>
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStar
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                              <FaStarHalf
+                                style={{ fontSize: "10px", color: "#D2DB0C" }}
+                              />
+                            </div>
+                          </div>
+
+                          <br />
+                          <span style={{ color: "white", fontWeight: "bold" }}>
+                            {" "}
+                            We Are NSW's Highest Rated Removalist Company & The
+                            Most Affordable! Includes Unlimited FREE Moving
+                            Boxes.
+                          </span>
                         </p>
 
                         <p data-aos="fade-up" data-aos-delay="200">
