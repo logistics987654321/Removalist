@@ -72,8 +72,9 @@ const Landing = () => {
     setConfirm(true);
     try {
       const response =
-        // await fetch("http://localhost:4000/",
-        await fetch("https://removalist.onrender.com/", {
+        // await fetch("https://removalist.onrender.com/",
+        //await fetch("http://localhost:4001/"
+        await fetch("http://localhost:4001/", {
           method: "post",
           body: JSON.stringify({
             name,

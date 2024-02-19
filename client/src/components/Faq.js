@@ -129,8 +129,8 @@ const Faq = () => {
                   <div className="paragraph">
                     You may be surprised to know that not every removal company
                     has insurance. It is important to do some research or ask
-                    questions about what is covered before you move. At ZOOM
-                    Removals, we offer full cover insurance, and transit
+                    questions about what is covered before you move.At PRIME REMOVALS & STORAGE, 
+                    we offer full cover insurance, and transit
                     insurance workers compensation as part of our removalists
                     service. As we are a proud member of the Australian
                     Furniture Removalists Association, we are authorised to sell
