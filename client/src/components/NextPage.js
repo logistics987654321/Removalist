@@ -104,14 +104,18 @@ const NextPage = () => {
           <div className="container-fluid">
             <div className="d-flex align-items-center">
               <div className="site-logo mr-auto w-100">
-                <a href="/">
-                  <span
-                    className="icon icon-truck"
-                    style={{ color: "yellow" }}
-                  ></span>
-                  Prime Removals
-                  <span style={{ color: "yellow" }}> &</span>Storage
-                </a>
+              <a href="/">
+                    <LazyLoadImage
+                      style={{
+                        width: "300px",
+                        maxHeight: "200px",
+                        borderRadius: "20px",
+                      }}
+                      src="assets/images/loco2.png"
+                    />
+                    {/* Prime Removals<span style={{ color: "yellow" }}> &</span>
+                    Storage */}
+                  </a>
               </div>
 
               <div className="mx-auto text-center"></div>

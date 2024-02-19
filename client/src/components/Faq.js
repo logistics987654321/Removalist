@@ -1,9 +1,9 @@
-import { LazyLoadImage } from "react-lazy-load-image-component";
+ 
 import React, { useState } from "react";
 
 const Faq = () => {
   return (
-    <>
+    <div>
 
       <div
         className="col-lg-12 site-section"
@@ -219,8 +219,252 @@ const Faq = () => {
           </div>
         </div>
       </div>
+
+      {/* <section class="faq-section">
+        <div
+          class="slide-1"
+          style={{
+            backgroundImage: `url('assets/images/images/bg.jpeg')`,
+          }}
+          data-stellar-background-ratio="0.5"
+        >
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <div class="faq-title text-center pb-3">
+                  <h2>FAQs</h2>
+                </div>
+              </div>
+              <div class="col-md-6 offset-md-3">
+                <div class="faq" id="accordion">
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-1">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-1"
+                          data-aria-expanded="true"
+                          data-aria-controls="faqCollapse-1"
+                        >
+                          <span class="badge">1</span>How many classes are held
+                          in a month?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-1"
+                      class="collapse"
+                      aria-labelledby="faqHeading-1"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>
+                          Classes are held from Monday to Saturday daily for
+                          science and maths which counts for minimum 25 classes
+                          in a month.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-2">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-2"
+                          data-aria-expanded="false"
+                          data-aria-controls="faqCollapse-2"
+                        >
+                          <span class="badge">2</span> How long is the duration
+                          of each class?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-2"
+                      class="collapse"
+                      aria-labelledby="faqHeading-2"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>The classes are held for one hour.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-3">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-3"
+                          data-aria-expanded="false"
+                          data-aria-controls="faqCollapse-3"
+                        >
+                          <span class="badge">3</span>Who are our teachers?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-3"
+                      class="collapse"
+                      aria-labelledby="faqHeading-3"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>
+                          Our teachers are subject experts hired from IITs. They
+                          are trained well to engage students in online classes.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-4">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-4"
+                          data-aria-expanded="false"
+                          data-aria-controls="faqCollapse-4"
+                        >
+                          <span class="badge">4</span>What criteria are used to
+                          evaluate the child’s performance?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-4"
+                      class="collapse"
+                      aria-labelledby="faqHeading-4"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>
+                          Weekly tests are held for each subject, furthermore
+                          every effort made during practice and exams is mapped
+                          and transformed into analytical reports that emphasise
+                          essential aspects such as strengths, limitations,
+                          speed, accuracy which is further updated to the
+                          parents monthly.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-5">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-5"
+                          data-aria-expanded="false"
+                          data-aria-controls="faqCollapse-5"
+                        >
+                          <span class="badge">5</span> What do we do if a child
+                          is a slow learner?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-5"
+                      class="collapse"
+                      aria-labelledby="faqHeading-5"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>
+                          {" "}
+                          When a class has a high number of students, it is
+                          nearly impossible for teachers to respond to a large
+                          group’s questions but we have kept a small batch where
+                          live two way interaction is available and the concepts
+                          are explained until the student is not clear with it.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-6">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-6"
+                          data-aria-expanded="false"
+                          data-aria-controls="faqCollapse-6"
+                        >
+                          <span class="badge">6</span> What will be covered in
+                          the sessions?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-6"
+                      class="collapse"
+                      aria-labelledby="faqHeading-6"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>
+                          Lessons will be taught as per the requirement. The
+                          school syllabus, concept explanation, revision, viva,
+                          career guidance and anything else they need help with
+                          will be guided.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="faqHeading-7">
+                      <div class="mb-0">
+                        <h5
+                          class="faq-title"
+                          data-toggle="collapse"
+                          data-target="#faqCollapse-7"
+                          data-aria-expanded="false"
+                          data-aria-controls="faqCollapse-7"
+                        >
+                          <span class="badge">7</span>How do you check whether
+                          the students are writing their notes presented by the
+                          teacher?
+                        </h5>
+                      </div>
+                    </div>
+                    <div
+                      id="faqCollapse-7"
+                      class="collapse"
+                      aria-labelledby="faqHeading-7"
+                      data-parent="#accordion"
+                    >
+                      <div class="card-body">
+                        <p>
+                          To keep up with the notebook work, we ask the students
+                          to send the photos of their notes and assignments
+                          weekly.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
  
-    </>
+      
+
+ 
+ 
+            </div>
+          
+      
+ 
   );
 };
 

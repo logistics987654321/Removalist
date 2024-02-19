@@ -73,7 +73,7 @@ const Landing = () => {
     try {
       const response =
         // await fetch("http://localhost:4000/",
-        await fetch("https://removalist.onrender.com", {
+        await fetch("https://removalist.onrender.com/", {
           method: "post",
           body: JSON.stringify({
             name,
@@ -107,7 +107,7 @@ const Landing = () => {
         data-spy="scroll"
         data-target=".site-navbar-target"
         data-offset="300"
-      >
+       >
         <div className="site-wrap">
           <div className="site-mobile-menu site-navbar-target">
             <div className="site-mobile-menu-header">
@@ -718,8 +718,8 @@ const Landing = () => {
                           </div>
 
                           <br />
-                          <span style={{ color: "white", fontWeight: "bold" }}>
-                            {" "}
+                          <span style={{ color: "white", fontWeight: "bold",marginTop:"-10px"}}>
+                     
                             We Are NSW's Highest Rated Removalist Company & The
                             Most Affordable! Includes Unlimited FREE Moving
                             Boxes.
