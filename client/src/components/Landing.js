@@ -74,7 +74,7 @@ const Landing = () => {
       const response =
         // await fetch("https://removalist.onrender.com/",
         //await fetch("http://localhost:4001/"
-        await fetch("http://localhost:4001/", {
+        await fetch("https://removalist.onrender.com/", {
           method: "post",
           body: JSON.stringify({
             name,
